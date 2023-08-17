@@ -8,9 +8,13 @@ import Facebook from './pages/facebook/Facebook';
 import Youtube from './pages/youtube/Youtube';
 import Home from './pages/Home';
 import Instagram from './pages/instagram/Instagram';
+import InstagramLikePage from './pages/instagram/InstagramLikePage';
+import InstagramLayout from './components/InstagramLayout';
+import InstagramFollowerPage from './pages/instagram/InstagramFollowerPage';
 
 function App() {
   const [data, setData] = useState([]);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   const [
     facebookPostLikes,
@@ -70,14 +74,23 @@ function App() {
         }
       />
       <Route
-        path='/instagram'
-        element={
-          <Instagram
-            instagramPostLikes={instagramPostLikes}
-            instagramFollowers={instagramFollowers}
-          />
-        }
-      />
+        path='instagram'
+        element={<InstagramLayout toggleMenu={toggleMenu} />}
+      >
+        <Route
+          index
+          element={
+            <Instagram
+              instagramPostLikes={instagramPostLikes}
+              instagramFollowers={instagramFollowers}
+              toggleMenu={toggleMenu}
+              onToggleMenu={setToggleMenu}
+            />
+          }
+        />
+        <Route path='likes' element={<InstagramLikePage />} />
+        <Route path='followers' element={<InstagramFollowerPage />} />
+      </Route>
     </Routes>
   );
 }
