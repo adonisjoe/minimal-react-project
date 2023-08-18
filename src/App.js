@@ -11,6 +11,10 @@ import Instagram from './pages/instagram/Instagram';
 import InstagramLikePage from './pages/instagram/InstagramLikePage';
 import InstagramLayout from './components/InstagramLayout';
 import InstagramFollowerPage from './pages/instagram/InstagramFollowerPage';
+import FacebookLayout from './components/FacebookLayout';
+import FacebookLikeServices from './pages/facebook/FacebookLikeServices';
+import FacebookLikes from './pages/facebook/FacebookLikes';
+import FacebookPostServices from './pages/facebook/FacebookPostServices';
 
 function App() {
   const [data, setData] = useState([]);
@@ -66,15 +70,38 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route
-        path='/facebook'
-        element={
-          <Facebook
-            facebookPostLikes={facebookPostLikes}
-            facebookPageLikes={facebookPageLikes}
-          />
-        }
-      />
+      <Route path='facebook' element={<FacebookLayout />}>
+        <Route
+          index
+          element={
+            <Facebook
+              facebookPostLikes={facebookPostLikes}
+              facebookPageLikes={facebookPageLikes}
+              onCapitalise={capitalizeWords}
+            />
+          }
+        />
+        <Route
+          path='post-services'
+          element={
+            <FacebookLikeServices
+              onCapitalise={capitalizeWords}
+              facebookPageLikes={facebookPageLikes}
+              facebookPostLikes={facebookPostLikes}
+            />
+          }
+        />
+        <Route
+          path='page-services'
+          element={
+            <FacebookPostServices
+              onCapitalise={capitalizeWords}
+              facebookPageLikes={facebookPageLikes}
+              facebookPostLikes={facebookPostLikes}
+            />
+          }
+        />
+      </Route>
       <Route
         path='/tiktok'
         element={
