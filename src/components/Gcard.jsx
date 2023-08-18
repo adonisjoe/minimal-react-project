@@ -11,8 +11,8 @@ const Gcard = ({
     <div className='gcard'>
       <div className='gcard-front'>
         <svg
-          width='100%'
-          height='100%'
+          width='150%'
+          height='150%'
           version='1.0'
           style={{ fillRule: 'evenodd', clipRule: 'evenodd' }}
           viewBox='0 0 13889 19444'
@@ -22,6 +22,7 @@ const Gcard = ({
               {`
                 .svgcolor {
                 fill: ${backgroundColor};
+            
                 }
               `}
             </style>
@@ -60,8 +61,11 @@ const Gcard = ({
           </g>
         </svg>
       </div>
-      <p className='text-xs mt-2 text-white font-bold whitespace-nowrap'>
-        {onCapitalise(data?.name)}
+      <p className='text-xs mt-1 text-white font-bold whitespace-nowrap relative z-50'>
+        {onCapitalise(
+          `${data.name.includes('tiktok') ? data?.type : data?.name}`
+        )}
+        {console.log(data)}
       </p>
     </div>
   );

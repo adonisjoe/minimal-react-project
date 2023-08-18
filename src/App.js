@@ -109,6 +109,8 @@ function App() {
         path='/tiktok'
         element={
           <Tiktok
+            data={data}
+            onCapitalise={capitalizeWords}
             tiktokVideoLikes={tiktokVideoLikes}
             tiktokFollowers={tiktokFollowers}
           />
