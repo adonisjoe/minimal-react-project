@@ -10,7 +10,6 @@ const GcardFacebook = ({
 }) => {
   return (
     <>
-      {console.log(facebookPageLikes)}
       <div className='gcard'>
         <div className='gcard-front'>
           <Link
@@ -81,8 +80,6 @@ const GcardFacebook = ({
           </svg>
           <p>{onCapitalise(type)}</p>
         </div>
-        {console.log(facebookPageLikes?.name?.includes('post'))}
-        {console.log(facebookPageLikes?.name)}
       </div>
     </>
   );

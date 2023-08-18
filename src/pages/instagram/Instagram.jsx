@@ -418,7 +418,7 @@ const Instagram = ({
                 }
               />
             </div>
-            {/* {console.log(instagramPostLikes)} */}
+
             <Content
               firstPage={instagramFollowers}
               secondPage={instagramPostLikes}

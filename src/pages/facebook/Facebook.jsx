@@ -50,7 +50,6 @@ const Facebook = ({ facebookPostLikes, facebookPageLikes, onCapitalise }) => {
         />
       );
     });
-  console.log(facebookList);
 
   return (
     <div>

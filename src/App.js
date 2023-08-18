@@ -15,6 +15,10 @@ import FacebookLayout from './components/FacebookLayout';
 import FacebookLikeServices from './pages/facebook/FacebookLikeServices';
 import FacebookLikes from './pages/facebook/FacebookLikes';
 import FacebookPostServices from './pages/facebook/FacebookPostServices';
+import YoutubeLayout from './components/YoutubeLayout';
+import YoutubeLikes from './pages/youtube/YoutubeLikes';
+import YoutubeViews from './pages/youtube/YoutubeViews';
+import YoutubeSubscribers from './pages/youtube/YoutubeSubscribers';
 
 function App() {
   const [data, setData] = useState([]);
@@ -33,19 +37,18 @@ function App() {
 
   useEffect(() => {
     // Fetch data when the component mounts
-    fetchData();
+    fetchData(
+      'https://api.sheety.co/06def408e74850aef0fbd22a79539f9f/ldServices/services'
+    );
   }, []);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        'https://api.sheety.co/06def408e74850aef0fbd22a79539f9f/ldServices/services'
-      ); // Replace with your API endpoint
-      const jsonData = await response.json();
-      setData(jsonData.services);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
+  const fetchData = (data) => {
+    fetch(data) // Replace with your API endpoint
+      .then((response) => response.json())
+      .then((jsonData) => {
+        setData(jsonData.services);
+      })
+      .catch((error) => console.error('Error fetching data:', error));
   };
 
   function capitalizeWords(str) {
@@ -111,15 +114,52 @@ function App() {
           />
         }
       />
-      <Route
-        path='/youtube'
-        element={
-          <Youtube
-            youtubeSubscribers={youtubeSubscribers}
-            youtubeViews={youtubeViews}
-          />
-        }
-      />
+      <Route path='youtube' element={<YoutubeLayout />}>
+        <Route
+          index
+          element={
+            <Youtube
+              youtubeSubscribers={youtubeSubscribers}
+              youtubeViews={youtubeViews}
+              onFetchData={fetchData}
+              onCapitalise={capitalizeWords}
+            />
+          }
+        />
+        <Route
+          path='youtube-likes'
+          element={
+            <YoutubeLikes
+              youtubeSubscribers={youtubeSubscribers}
+              youtubeViews={youtubeViews}
+              onFetchData={fetchData}
+              onCapitalise={capitalizeWords}
+            />
+          }
+        />
+        <Route
+          path='youtube-views'
+          element={
+            <YoutubeViews
+              youtubeSubscribers={youtubeSubscribers}
+              youtubeViews={youtubeViews}
+              onFetchData={fetchData}
+              onCapitalise={capitalizeWords}
+            />
+          }
+        />
+        <Route
+          path='youtube-subscribers'
+          element={
+            <YoutubeSubscribers
+              youtubeSubscribers={youtubeSubscribers}
+              youtubeViews={youtubeViews}
+              onFetchData={fetchData}
+              onCapitalise={capitalizeWords}
+            />
+          }
+        />
+      </Route>
       <Route
         path='instagram'
         element={

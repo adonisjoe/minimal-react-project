@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Gcard = ({ logo, backgroundColor = '#fff', title }) => {
+const Gcard = ({
+  logo,
+  backgroundColor = '#fff',
+  title,
+  data,
+  onCapitalise,
+}) => {
   return (
     <div className='gcard'>
       <div className='gcard-front'>
@@ -29,7 +35,7 @@ const Gcard = ({ logo, backgroundColor = '#fff', title }) => {
         </svg>
 
         <div className='gcard-logo'>{logo}</div>
-        <div className='gcard-value'>$25</div>
+        <div className='gcard-value text-gray-700'>{data?.pricePer1000}</div>
       </div>
       <div className='gcard-back'>
         <svg
@@ -55,7 +61,7 @@ const Gcard = ({ logo, backgroundColor = '#fff', title }) => {
         </svg>
       </div>
       <p className='text-xs mt-2 text-white font-bold whitespace-nowrap'>
-        {title}
+        {onCapitalise(data?.name)}
       </p>
     </div>
   );
