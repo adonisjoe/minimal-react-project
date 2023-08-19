@@ -163,6 +163,7 @@ function App() {
           element={
             <YoutubeLikes
               youtubeSubscribers={youtubeSubscribers}
+              youtubeVideoLikes={youtubeVideoLikes}
               youtubeViews={youtubeViews}
               onFetchData={fetchData}
               onCapitalise={capitalizeWords}
