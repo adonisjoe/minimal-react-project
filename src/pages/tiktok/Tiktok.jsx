@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 const Tiktok = ({ tiktokVideoLikes, tiktokFollowers, onCapitalise, data }) => {
   const tiktokList = data?.filter((data) => data?.platform === 'tiktok');
-  console.log(tiktokList);
+
   return (
     <div>
       <Nav />
