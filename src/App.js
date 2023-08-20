@@ -19,6 +19,9 @@ import YoutubeLayout from './components/YoutubeLayout';
 import YoutubeLikes from './pages/youtube/YoutubeLikes';
 import YoutubeViews from './pages/youtube/YoutubeViews';
 import YoutubeSubscribers from './pages/youtube/YoutubeSubscribers';
+import TiktokLayout from './components/TiktokLayout';
+import TiktokLikes from './pages/tiktok/TiktokLikes';
+import TiktokFollowers from './pages/tiktok/TiktokFollowers';
 
 function App() {
   const [data, setData] = useState([]);
@@ -105,15 +108,42 @@ function App() {
           }
         />
       </Route>
-      <Route
-        path='/tiktok'
-        element={
-          <Tiktok
-            tiktokVideoLikes={tiktokVideoLikes}
-            tiktokFollowers={tiktokFollowers}
-          />
-        }
-      />
+
+      <Route path='tiktok' element={<TiktokLayout />}>
+        <Route
+          index
+          element={
+            <Tiktok
+              data={data}
+              onCapitalise={capitalizeWords}
+              tiktokVideoLikes={tiktokVideoLikes}
+              tiktokFollowers={tiktokFollowers}
+            />
+          }
+        />
+        <Route
+          path='video-likes'
+          element={
+            <TiktokLikes
+              data={data}
+              onCapitalise={capitalizeWords}
+              tiktokVideoLikes={tiktokVideoLikes}
+              tiktokFollowers={tiktokFollowers}
+            />
+          }
+        />
+        <Route
+          path='followers'
+          element={
+            <TiktokFollowers
+              data={data}
+              onCapitalise={capitalizeWords}
+              tiktokVideoLikes={tiktokVideoLikes}
+              tiktokFollowers={tiktokFollowers}
+            />
+          }
+        />
+      </Route>
       <Route path='youtube' element={<YoutubeLayout />}>
         <Route
           index
