@@ -24,24 +24,24 @@ const FormInfo = ({
       order: {
         orderId: `${nanoid()}`,
         serviceId: `${nanoid()}`,
-        link: `${data.username}`,
-        amount: `${data.amount}`,
+        link: `${data?.username}`,
+        amount: `${data?.amount}`,
       },
     };
 
-    setOrderId(body.order.orderId);
+    setOrderId(body?.order?.orderId);
 
     fetch(url, {
       method: 'POST',
-      body: JSON.stringify(body),
+      body: JSON?.stringify(body),
       headers: {
         'Content-Type': 'application/json',
       },
     })
-      .then((response) => response.json())
+      .then((response) => response?.json())
       .then((json) => {
         // Do something with response object
-        return json.order;
+        return json?.order;
       });
 
     reset();
@@ -56,7 +56,7 @@ const FormInfo = ({
         noValidate
       >
         <h2 className='text-4xl text-center font-bold'>
-          {onCapitalise(title)} Info
+          {onCapitalise?.(title)} Info
         </h2>
         <div className='form-group no'>
           <label htmlFor='username'>Username</label>

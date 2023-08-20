@@ -34,6 +34,7 @@ function App() {
     instagramFollowers,
     youtubeSubscribers,
     youtubeViews,
+    youtubeVideoLikes,
     tiktokVideoLikes,
     tiktokFollowers,
   ] = data;
@@ -49,9 +50,9 @@ function App() {
     fetch(data) // Replace with your API endpoint
       .then((response) => response.json())
       .then((jsonData) => {
-        setData(jsonData.services);
+        setData(jsonData?.services);
       })
-      .catch((error) => console.error('Error fetching data:', error));
+      .catch((error) => `Error fetching data:, ${error}`);
   };
 
   function capitalizeWords(str) {
@@ -60,10 +61,11 @@ function App() {
 
     // Capitalize the first letter of each word
     const capitalizedWords = words?.map?.((word) => {
-      if (word.length === 0) {
+      if (word?.length === 0) {
         return word; // Skip empty words
       }
-      const capitalized = word[0].toUpperCase() + word.slice(1).toLowerCase();
+      const capitalized =
+        word[0]?.toUpperCase() + word?.slice?.(1).toLowerCase();
       return capitalized;
     });
 
@@ -138,8 +140,8 @@ function App() {
             <TiktokFollowers
               data={data}
               onCapitalise={capitalizeWords}
-              tiktokVideoLikes={tiktokVideoLikes}
               tiktokFollowers={tiktokFollowers}
+              tiktokVideoLikes={tiktokVideoLikes}
             />
           }
         />
