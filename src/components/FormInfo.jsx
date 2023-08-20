@@ -8,6 +8,7 @@ const FormInfo = ({
   title,
   instagramPostLikes,
   instagramFollowers,
+  youtubeVideoLikes,
   onCapitalise,
 }) => {
   const form = useForm();
