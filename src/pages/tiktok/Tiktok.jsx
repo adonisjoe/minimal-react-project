@@ -368,8 +368,9 @@ const Tiktok = ({ tiktokVideoLikes, tiktokFollowers, onCapitalise, data }) => {
               <h2>Disclaimer</h2>
 
               <p>
-                {tiktokList?.[0]?.description} and{' '}
-                {tiktokList?.[1]?.description}
+                All social signals provided by our platform are non-invasive and
+                non-engagement. New likes, followers or subscribers will not
+                engage with your future content and not buy stuff you promote.
               </p>
             </div>
           </div>
