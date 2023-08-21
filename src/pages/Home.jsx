@@ -225,7 +225,7 @@ const Home = () => {
           </div>
 
           <div id='page'>
-            <h2 className=''>Choose Gift Card</h2>
+            <h2 className=''>What do you need?</h2>
             <div id='home'>
               <InstagramLogo />
               <Tiktok />

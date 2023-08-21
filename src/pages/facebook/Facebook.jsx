@@ -307,9 +307,7 @@ const Facebook = ({ facebookPostLikes, facebookPageLikes, onCapitalise }) => {
             </div>
           </div>
           <div id='page'>
-            <h2>
-              choose between {name ? name : ''} and {facebookPageLikes?.type}
-            </h2>
+            <h2>WHAT DO YOU NEED?</h2>
             <div id='cards' className=''>
               <div className='flex justify-between'>{serviceList}</div>
             </div>

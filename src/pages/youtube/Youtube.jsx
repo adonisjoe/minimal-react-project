@@ -292,10 +292,7 @@ const Youtube = ({ onCapitalise }) => {
           </div>
 
           <div id='page'>
-            <h2>
-              Choose between {youtube?.[0]?.name}, {youtube?.[1]?.name} and{' '}
-              {youtube?.[2]?.name}
-            </h2>
+            <h2>WHAT DO YOU NEED?</h2>
             <div id='cards'>
               {youtube?.map((data) => {
                 return (
@@ -390,15 +387,12 @@ const Youtube = ({ onCapitalise }) => {
               })}
             </div>
             <div id='content'>
-              <h2>
-                About {onCapitalise(youtube?.[0]?.name)},{' '}
-                {onCapitalise(youtube?.[1]?.name)} and{' '}
-                {onCapitalise(youtube?.[2]?.name)}
-              </h2>
+              <h2>Disclaimer</h2>
 
               <p>
-                Choose between {youtube?.[0]?.description},{' '}
-                {youtube?.[1]?.description} and {youtube?.[2]?.description}
+                All social signals provided by our platform are non-invasive and
+                non-engagement. New likes, followers or subscribers will not
+                engage with your future content and not buy stuff you promote.
               </p>
             </div>
           </div>

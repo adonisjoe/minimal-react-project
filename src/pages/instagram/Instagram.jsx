@@ -297,10 +297,7 @@ const Instagram = ({
           </div>
 
           <div id='page' className='space-y-14'>
-            <h2>
-              Choose between {instagramPostLikes?.type} and{' '}
-              {instagramFollowers?.type} boost!
-            </h2>
+            <h2>WHAT DO YOU NEED?</h2>
             <div id='cards' className='flex justify-between'>
               {instagramData?.map((data) => (
                 <Gcard
