@@ -279,9 +279,7 @@ const Tiktok = ({ tiktokVideoLikes, tiktokFollowers, onCapitalise, data }) => {
             </div>
           </div>
           <div id='page'>
-            <h2>
-              Select between {tiktokList?.[0]?.name} and {tiktokList?.[1]?.name}
-            </h2>
+            <h2>What do you need?</h2>
             <div id='cards' className=''>
               {tiktokList?.map((data) => (
                 <div className='w-72 mx-auto' key={data.serviceId}>
@@ -367,10 +365,7 @@ const Tiktok = ({ tiktokVideoLikes, tiktokFollowers, onCapitalise, data }) => {
               ))}
             </div>
             <div id='content'>
-              <h2>
-                About {onCapitalise(tiktokList?.[0]?.name)} and{' '}
-                {onCapitalise(tiktokList?.[1]?.type)}
-              </h2>
+              <h2>Disclaimer</h2>
 
               <p>
                 {tiktokList?.[0]?.description} and{' '}

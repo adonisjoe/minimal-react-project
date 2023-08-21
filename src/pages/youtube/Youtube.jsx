@@ -387,11 +387,7 @@ const Youtube = ({ onCapitalise }) => {
               })}
             </div>
             <div id='content'>
-              <h2>
-                About {onCapitalise(youtube?.[0]?.name)},{' '}
-                {onCapitalise(youtube?.[1]?.name)} and{' '}
-                {onCapitalise(youtube?.[2]?.name)}
-              </h2>
+              <h2>Disclaimer</h2>
 
               <p>
                 Choose between {youtube?.[0]?.description},{' '}
