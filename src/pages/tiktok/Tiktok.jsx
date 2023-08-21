@@ -250,13 +250,15 @@ const Tiktok = ({ tiktokVideoLikes, tiktokFollowers, onCapitalise, data }) => {
                 </g>
               </svg>
             </a>
+            {/* <span id='intro1'>Boost your socials</span>
+            <h1>
+              <span id='intro2'>Like dealer</span>
+            </h1> */}
 
             <div id='intro'>
-              <span id='intro1'>Psst! Hey there!</span>
-              <span id='intro2'>Do you want some </span>
-              <h1>
-                {tiktokList?.[0]?.name} and {tiktokList?.[1]?.type}
-              </h1>
+              <span id='intro1'>Boost your socials</span>
+              <span id='intro2'>Like dealer </span>
+
               <div id='scrolldown'>
                 <svg
                   width='100%'

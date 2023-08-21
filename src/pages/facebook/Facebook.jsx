@@ -284,12 +284,9 @@ const Facebook = ({ facebookPostLikes, facebookPageLikes, onCapitalise }) => {
             </a>
 
             <div id='intro'>
-              <span id='intro1'>Psst! Hey there!</span>
+              <span id='intro1'>Boost your socials</span>
               <h1>
-                <span id='intro2'>
-                  Do you want affordable {facebookList[0]?.platform}{' '}
-                  {facebookList[0]?.type} and {facebookList[1]?.type}
-                </span>
+                <span id='intro2'>Like dealer</span>
               </h1>
               <div id='scrolldown'>
                 <svg

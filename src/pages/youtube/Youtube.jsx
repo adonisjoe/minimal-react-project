@@ -268,9 +268,9 @@ const Youtube = ({ onCapitalise }) => {
             </a>
 
             <div id='intro'>
-              <span id='intro1'>Psst! Hey there!</span>
-              <span id='intro2'>Do you want some </span>
-              <h1>Free eBay Gift Cards</h1>
+              <span id='intro1'>boost your socials</span>
+              <span id='intro2'>Like dealer</span>
+
               <div id='scrolldown'>
                 <svg
                   width='100%'

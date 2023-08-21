@@ -201,9 +201,10 @@ const Home = () => {
             </a>
 
             <div id='intro'>
-              <span id='intro1'>Psst! Hey there!</span>
-              <span id='intro2'>Do you want some </span>
-              <h1>Free Gift Cards</h1>
+              <span id='intro1'>Boost your socials</span>
+              <h1>
+                <span id='intro2'>Like dealer</span>
+              </h1>
               <div id='scrolldown'>
                 <svg
                   width='100%'

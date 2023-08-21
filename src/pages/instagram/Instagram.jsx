@@ -273,11 +273,8 @@ const Instagram = ({
 
             <div id='intro' className=' pb-10'>
               <h1 className=''>
-                <span id='intro1'>Hey there!</span>
-                <span id='intro2'>
-                  Do you want affordable Instagram {instagramPostLikes?.type}{' '}
-                  and {instagramFollowers?.type}
-                </span>
+                <span id='intro1'>Boost your socials</span>
+                <span id='intro2'>like dealer</span>
               </h1>
 
               <div id='scrolldown'>
