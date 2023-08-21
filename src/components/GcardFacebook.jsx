@@ -78,7 +78,7 @@ const GcardFacebook = ({
               />
             </g>
           </svg>
-          <p>{onCapitalise(type)}</p>
+          <p className='text-center'>{onCapitalise(type)}</p>
         </div>
       </div>
     </>
