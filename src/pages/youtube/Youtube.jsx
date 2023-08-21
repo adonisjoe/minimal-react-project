@@ -296,10 +296,7 @@ const Youtube = ({ onCapitalise }) => {
           </div>
 
           <div id='page'>
-            <h2>
-              Choose between {youtube?.[0]?.name}, {youtube?.[1]?.name} and{' '}
-              {youtube?.[2]?.name}
-            </h2>
+            <h2>WHAT DO YOU NEED?</h2>
             <div id='cards'>
               {youtube?.map((data) => {
                 return (
