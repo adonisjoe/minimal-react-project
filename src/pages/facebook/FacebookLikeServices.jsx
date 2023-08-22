@@ -1,5 +1,7 @@
 import React from 'react';
 import FormInfo from '../../components/FormInfo';
+import Nav from '../../components/Nav';
+import Page from '../../components/Page';
 
 const FacebookServices = ({
   onCapitalise,
@@ -7,9 +9,16 @@ const FacebookServices = ({
   facebookPostLikes,
 }) => {
   return (
-    <div>
-      <FormInfo title={facebookPostLikes?.name} onCapitalise={onCapitalise} />
-    </div>
+    <>
+      <Page
+        title={facebookPageLikes?.name}
+        PageComponent={FormInfo}
+        Nav={Nav}
+        youtubeViews={facebookPostLikes}
+        youtubeVideoLikes={facebookPageLikes}
+        onCapitalise={onCapitalise}
+      />
+    </>
   );
 };
 

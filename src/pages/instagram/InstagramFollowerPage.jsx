@@ -1,6 +1,7 @@
 import React from 'react';
 import FormInfo from '../../components/FormInfo';
-import { nanoid } from 'nanoid';
+import Page from '../../components/Page';
+import Nav from '../../components/Nav';
 
 const InstagramFollowerPage = ({ title, instagramFollowers, onCapitalise }) => {
   const res = instagramFollowers?.name?.indexOf('I');
@@ -8,20 +9,14 @@ const InstagramFollowerPage = ({ title, instagramFollowers, onCapitalise }) => {
 
   return (
     <div>
-      <FormInfo title={words} onCapitalise={onCapitalise} />
+      <Page
+        title={instagramFollowers?.name}
+        PageComponent={FormInfo}
+        Nav={Nav}
+        onCapitalise={onCapitalise}
+      />
     </div>
   );
 };
 
 export default InstagramFollowerPage;
-
-//  headers: {
-//           'Content-Type': 'application/json',
-//         },
-
-// order: {
-//         orderId: `${nanoid()}`,
-//         serviceId: `${nanoid()}`,
-//         link: `${data.username}`,
-//         amount: `${data.amount}`,
-//       },

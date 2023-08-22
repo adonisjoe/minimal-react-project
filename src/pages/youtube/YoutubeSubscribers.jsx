@@ -1,5 +1,7 @@
 import React from 'react';
 import FormInfo from '../../components/FormInfo';
+import Nav from '../../components/Nav';
+import Page from '../../components/Page';
 
 const YoutubeSubscribers = ({
   youtubeViews,
@@ -9,14 +11,21 @@ const YoutubeSubscribers = ({
   onCapitalise,
   data,
 }) => {
+  console.log(youtubeSubscribers);
   return (
-    <FormInfo
-      title={youtubeSubscribers?.name}
-      tiktokVideoLikes={youtubeVideoLikes}
-      tiktokFollowers={onFetchData}
-      onCapitalise={onCapitalise}
-      data={data}
-    />
+    <>
+      <Page
+        title={youtubeSubscribers?.name}
+        PageComponent={FormInfo}
+        Nav={Nav}
+        youtubeViews={youtubeViews}
+        youtubeVideoLikes={youtubeVideoLikes}
+        youtubeSubscribers={youtubeSubscribers}
+        onFetchData={onFetchData}
+        onCapitalise={onCapitalise}
+        data={data}
+      />
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ import '../index.css';
 
 const FormInfo = ({
   title,
+  YoutubeSubscribersTitle,
   instagramPostLikes,
   instagramFollowers,
   youtubeVideoLikes,
@@ -52,17 +53,20 @@ const FormInfo = ({
   return (
     <div>
       <form
-        className='bg-gray-400 max-w-[40rem] text-center mx-auto p-8 space-y-8 mt-20'
+        className=' max-w-[40rem] text-center mx-auto  space-y-8 mt-20 flex-col justify-end'
         onSubmit={handleSubmit(onSubmit)}
         noValidate
       >
-        <h2 className='text-4xl text-center font-bold'>
+        <h2 className='text-3xl text-center font-bold text-[#F0F0F0]'>
           {onCapitalise?.(title)} Info
         </h2>
-        <div className='form-group no'>
-          <label htmlFor='username'>Username</label>
+        {/* {console.log(title)} */}
+        <div className='form-group flex flex-col items-start'>
+          <label className='text-[#F0F0F0]' htmlFor='username'>
+            Username
+          </label>
           <input
-            className='w-[70%] p-[.5rem] text-[14px] ml-4'
+            className='min-w-[100%] p-[.5rem] text-[14px] text-[#333333]'
             id='username'
             type='text'
             {...register('username', {
@@ -71,10 +75,12 @@ const FormInfo = ({
           />
           <p className='text-red-600 text-xs'>{errors.username?.message}</p>
         </div>
-        <div className='form-group'>
-          <label htmlFor='amount'>Amount</label>
+        <div className='form-group flex flex-col justify items-start'>
+          <label className='text-[#F0F0F0]' htmlFor='amount'>
+            Amount
+          </label>
           <input
-            className='min-w-[70%] p-[.5rem] text-[14px] ml-4'
+            className='min-w-[100%] p-[.5rem] text-[14px] text-[#333333]'
             type='number'
             id='amount'
             {...register('amount', {
@@ -87,7 +93,7 @@ const FormInfo = ({
           <p className='text-red-600 text-xs'>{errors.amount?.message}</p>
         </div>
         <div className='form-group w-full'>
-          <button className='bg-white w-fit mx-auto block py-4 px-8 text-sm rounded-[.4rem] border-none'>
+          <button className='bg-white w-fit mx-auto block py-4 px-8 text-sm rounded-[.4rem] border-none text-[#7E8C8D]'>
             Submit
           </button>
         </div>
