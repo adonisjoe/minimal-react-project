@@ -1,18 +1,25 @@
 import React from 'react';
 import FormInfo from '../../components/FormInfo';
+import Nav from '../../components/Nav';
+import Page from '../../components/Page';
 
 const YoutubeViews = ({
   youtubeVideoLikes,
+  youtubeSubscribers,
   youtubeViews,
   onFetchData,
   onCapitalise,
   data,
 }) => {
   return (
-    <FormInfo
+    <Page
       title={youtubeViews?.name}
-      tiktokVideoLikes={youtubeVideoLikes}
-      tiktokFollowers={onFetchData}
+      PageComponent={FormInfo}
+      Nav={Nav}
+      youtubeViews={youtubeViews}
+      youtubeVideoLikes={youtubeVideoLikes}
+      youtubeSubscribers={youtubeSubscribers}
+      onFetchData={onFetchData}
       onCapitalise={onCapitalise}
       data={data}
     />

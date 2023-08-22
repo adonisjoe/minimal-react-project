@@ -1,5 +1,7 @@
 import React from 'react';
 import FormInfo from '../../components/FormInfo';
+import Page from '../../components/Page';
+import Nav from '../../components/Nav';
 
 const InstagramLikePage = ({
   title,
@@ -9,11 +11,10 @@ const InstagramLikePage = ({
 }) => {
   return (
     <div>
-      {' '}
-      <FormInfo
+      <Page
         title={instagramPostLikes?.name}
-        instagramPostLikes={instagramPostLikes}
-        instagramFollowers={instagramFollowers}
+        PageComponent={FormInfo}
+        Nav={Nav}
         onCapitalise={onCapitalise}
       />
     </div>

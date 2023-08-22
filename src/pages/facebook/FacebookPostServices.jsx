@@ -1,14 +1,23 @@
 import React from 'react';
 import FormInfo from '../../components/FormInfo';
+import Page from '../../components/Page';
+import Nav from '../../components/Nav';
+
 const FacebookPostServices = ({
   onCapitalise,
   facebookPageLikes,
   facebookPostLikes,
 }) => {
   return (
-    <div>
-      <FormInfo title={facebookPostLikes?.name} onCapitalise={onCapitalise} />
-    </div>
+    <>
+      <Page
+        title={facebookPostLikes?.name}
+        PageComponent={FormInfo}
+        Nav={Nav}
+        youtubeViews={facebookPostLikes}
+        onCapitalise={onCapitalise}
+      />
+    </>
   );
 };
 
