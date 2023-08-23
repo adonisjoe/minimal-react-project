@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Gcard from '../../components/Gcard';
-import FormInfo from '../../components/FormInfo';
 
 import '../../index.css';
 import { Link } from 'react-router-dom';
@@ -9,8 +8,6 @@ import Content from '../../components/Content';
 const Instagram = ({
   instagramPostLikes,
   instagramFollowers,
-  toggleMenu,
-  onToggleMenu,
   onCapitalise,
 }) => {
   const [data, setData] = useState();
@@ -36,14 +33,6 @@ const Instagram = ({
 
   return (
     <div>
-      <div
-        id='menu-trigger'
-        onClick={() => onToggleMenu((prevMenu) => !prevMenu)}
-      >
-        <div className='menu-trigger'></div>
-        <div className='menu-trigger'></div>
-        <div className='menu-trigger'></div>
-      </div>
       <div id='wrapper'>
         <div id='inner'>
           <script type='text/javascript'>

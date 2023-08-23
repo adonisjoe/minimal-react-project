@@ -19,12 +19,8 @@ import Nav from '../components/Nav';
 const Home = () => {
   return (
     <div>
-      <Nav />
-      <div id='menu-trigger'>
-        <div className='menu-trigger'></div>
-        <div className='menu-trigger'></div>
-        <div className='menu-trigger'></div>
-      </div>
+      {/* <Nav /> */}
+
       <div id='wrapper'>
         <div id='inner'>
           <script type='text/javascript'>

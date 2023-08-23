@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import GcardFacebook from '../../components/GcardFacebook';
-import Nav from '../../components/Nav';
 import Content from '../../components/Content';
 import { Link } from 'react-router-dom';
 
@@ -53,18 +52,12 @@ const Facebook = ({ facebookPostLikes, facebookPageLikes, onCapitalise }) => {
 
   return (
     <div>
-      <Nav />
-      <div id='menu-trigger'>
-        <div className='menu-trigger'></div>
-        <div className='menu-trigger'></div>
-        <div className='menu-trigger'></div>
-      </div>
       <div id='wrapper'>
         <div id='inner'>
-          <script type='text/javascript'>
+          <script type='text/javascript'>{`
             document.getElementById('wrapper').style.opacity = '0';
             document.getElementById('menu-trigger').style.opacity = '0';
-          </script>
+       `}</script>
           <div id='sky'></div>
           <div id='background'>
             <svg
