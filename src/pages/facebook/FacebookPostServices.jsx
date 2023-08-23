@@ -3,11 +3,7 @@ import FormInfo from '../../components/FormInfo';
 import Page from '../../components/Page';
 import Nav from '../../components/Nav';
 
-const FacebookPostServices = ({
-  onCapitalise,
-  facebookPageLikes,
-  facebookPostLikes,
-}) => {
+const FacebookPostServices = ({ onCapitalise, facebookPostLikes }) => {
   return (
     <>
       <Page

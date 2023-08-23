@@ -27,7 +27,6 @@ const Nav = () => {
         id='menu'
         className='bg-[#65666b]/90 h-96'
       >
-        {console.log(`${toggleMenu ? 'toggle' : 'none'}`)}
         <ul>
           <li>
             <Link to='/facebook' className='menu'>
