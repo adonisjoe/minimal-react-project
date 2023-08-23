@@ -1,7 +1,7 @@
 import './App.css';
 // import Home from './pages/Home';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Tiktok from './pages/tiktok/Tiktok';
 import Facebook from './pages/facebook/Facebook';

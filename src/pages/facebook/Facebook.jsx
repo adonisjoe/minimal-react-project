@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import GcardFacebook from '../../components/GcardFacebook';
 import Content from '../../components/Content';
-
 import Header from '../../components/Header';
 
 const Facebook = ({ facebookPostLikes, facebookPageLikes, onCapitalise }) => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [, setLoading] = useState(true);
+  const [, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {

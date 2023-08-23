@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Content = ({ firstPage, secondPage, onCapitalise }) => {
+const Content = () => {
   return (
     <div id='content'>
       <h2 className='text-left'>Disclaimer</h2>

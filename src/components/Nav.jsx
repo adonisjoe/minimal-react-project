@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../pages/Home.css';
 
 const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);

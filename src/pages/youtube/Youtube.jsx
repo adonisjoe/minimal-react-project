@@ -7,7 +7,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Gcard from '../../components/Gcard';
-import Nav from '../../components/Nav';
+
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 

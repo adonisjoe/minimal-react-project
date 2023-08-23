@@ -1,10 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const FacebookCard = () => {
   return (
-    <Link className='home-card card-free-facebook-gift-cards' to='/facebook'>
-      <div className='home-card-title'>Free Facebook Gift Cards</div>
+    <Link
+      className='home-card '
+      style={{ transform: 'rotateZ(0deg)' }}
+      to='/facebook'
+    >
       <div className='home-card-front'>
         <svg
           width='100%'

@@ -10,7 +10,7 @@ const GcardFacebook = ({
 }) => {
   return (
     <>
-      <div className='gcard'>
+      <div className='gcard' style={{ transform: 'rotateZ(0deg)' }}>
         <div className='gcard-front'>
           <Link
             to={`${type.includes('post') ? `post-services` : `page-services`}`}

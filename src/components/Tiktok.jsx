@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Tiktok = () => {
   return (
-    <Link className='home-card card-free-amazon-gift-cards' to='./tiktok'>
-      <div className='home-card-title'>Free Amazon Gift Cards</div>
+    <Link className='home-card ' to='./tiktok'>
       <div className='home-card-front'>
         <svg
           width='100%'

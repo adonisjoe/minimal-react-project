@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 
 const InstagramLogo = () => {
   return (
-    <Link className='home-card card-free-ebay-gift-cards' to='./instagram'>
-      <div className='home-card-title'>Free eBay Gift Cards</div>
+    <Link
+      className='home-card'
+      to='./instagram'
+      style={{ transform: 'rotateZ(0deg)' }}
+    >
       <div className='home-card-front'>
         <svg
           width='100%'
