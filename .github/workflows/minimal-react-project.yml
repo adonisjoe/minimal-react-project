@@ -9,32 +9,39 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-server: ftp.domeniu.ro
-username: deploy@domeniu.ro
-password: ${{secrets.FTP_PASSWORD}}
-local-dir: ./dist/
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+  cd:
+    runs-on: ${{ matrix.os }}
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@master
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Setup node env
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: ${{ matrix.node }}
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate
+        run: npm run build
+
+      - name: deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ftp.like-dealer.com
+          username: deploy@like-dealer.com
+          password: ${{secrets.FTP_PASSWORD}}
+          local-dir: ./build/
