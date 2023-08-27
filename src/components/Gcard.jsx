@@ -39,8 +39,10 @@ const Gcard = ({
 
         <div
           className={`gcard-value${
-            data.platform === 'youtube' ? '--youtube' : ''
-          } text-gray-700`}
+            data.platform === `youtube`
+              ? '--youtube'
+              : `${data.platform === 'instagram' ? '--youtube' : ''}`
+          }  text-gray-700`}
         >
           {data?.pricePer1000}
         </div>

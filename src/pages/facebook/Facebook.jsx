@@ -242,7 +242,7 @@ const Facebook = ({ facebookPostLikes, facebookPageLikes, onCapitalise }) => {
           <div id='page'>
             <h2>WHAT DO YOU NEED?</h2>
             <div id='cards' className=''>
-              <div className='flex gap-10'>{serviceList}</div>
+              <div className='flex'>{serviceList}</div>
             </div>
 
             <Content

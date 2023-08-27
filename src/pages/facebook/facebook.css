@@ -242,7 +242,7 @@ h1 {
   width: 980px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 90px 135px 40px 430px;
+  padding: 90px 135px 40px 450px;
 }
 #page > h2 {
   font-family: 'Advent Pro', sans-serif;
@@ -404,7 +404,7 @@ h1 {
   position: absolute;
   z-index: 2;
   right: 9px;
-  bottom: 1.9rem;
+  bottom: 0.5rem;
   color: #282828;
   font-size: 16px;
   font-weight: 600;
