@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
-import { DevTool } from '@hookform/devtools';
 import { useForm } from 'react-hook-form';
 import { nanoid } from 'nanoid';
 import '../index.css';
 
-const FormInfo = ({
-  title,
-  YoutubeSubscribersTitle,
-  instagramPostLikes,
-  instagramFollowers,
-  youtubeVideoLikes,
-  onCapitalise,
-}) => {
+const FormInfo = ({ title, onCapitalise }) => {
   const form = useForm();
 
-  const { register, control, reset, handleSubmit, formState } = form;
+  const { register, reset, handleSubmit, formState } = form;
   const [orderId, setOrderId] = useState('');
 
   const { errors, isSubmitSuccessful } = formState;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import InstagramHeader from './InstagramHeader';
-import FormInfo from './FormInfo';
 
 const InstagramLayout = ({
   toggleMenu,

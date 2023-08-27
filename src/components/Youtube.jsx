@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Youtube = () => {
   return (
-    <Link className='home-card card-free-netflix-gift-cards' to='/youtube'>
-      <div className='home-card-title'>Free Netflix Gift Cards</div>
+    <Link className='home-card ' to='/youtube'>
       <div className='home-card-front'>
         <svg
           width='100%'
