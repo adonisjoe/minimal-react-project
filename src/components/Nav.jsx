@@ -5,9 +5,7 @@ const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <div
-      className={`absolute w-full top-0 left-0 ${
-        toggleMenu ? 'h-[30rem]' : ''
-      }`}
+      className={`absolute w-full top-0 left-0 ${toggleMenu ? 'h-[50%]' : ''}`}
     >
       <div
         id='menu-trigger'

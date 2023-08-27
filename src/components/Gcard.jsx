@@ -36,7 +36,14 @@ const Gcard = ({
         </svg>
 
         <div className='gcard-logo'>{logo}</div>
-        <div className='gcard-value text-gray-700'>{data?.pricePer1000}</div>
+
+        <div
+          className={`gcard-value${
+            data.platform === 'youtube' ? '--youtube' : ''
+          } text-gray-700`}
+        >
+          {data?.pricePer1000}
+        </div>
       </div>
       <div className='gcard-back'>
         <svg
@@ -61,7 +68,7 @@ const Gcard = ({
           </g>
         </svg>
       </div>
-      <p className='text-xs mt-1 text-center text-white font-bold whitespace-nowrap relative z-50'>
+      <p className='text-xs mt-1 text-center text-white font-bold  relative z-50'>
         {onCapitalise(
           `${data?.name?.includes('tiktok') ? data?.type : data?.name}`
         )}{' '}
