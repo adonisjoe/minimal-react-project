@@ -242,7 +242,7 @@ h1 {
   width: 980px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 90px 140px 150px 460px;
+  padding: 90px 135px 40px 430px;
 }
 #page > h2 {
   font-family: 'Advent Pro', sans-serif;
@@ -397,6 +397,15 @@ h1 {
   right: 9px;
   bottom: 7px;
   color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.gcard-value--youtube {
+  position: absolute;
+  z-index: 2;
+  right: 9px;
+  bottom: 1.9rem;
+  color: #282828;
   font-size: 16px;
   font-weight: 600;
 }
@@ -746,7 +755,7 @@ h1 {
 
   #page {
     width: 100vw;
-    padding: 150vw 10vw 20vw 24vw;
+    padding: 150vw 10vw 20vw 10vw;
     margin: 0;
     z-index: 1;
   }
@@ -780,6 +789,8 @@ h1 {
     margin-left: 0;
     height: auto;
     padding-bottom: 0;
+    display: flex;
+    gap: 0.5rem;
   }
   .gcard {
     float: none;
@@ -904,5 +915,83 @@ h1 {
   .xbox #genreturn {
     letter-spacing: 0 !important;
     font-size: 7.4vw !important;
+  }
+
+  .gcard {
+    margin-bottom: 6rem !important;
+  }
+
+  .gcard p {
+    color: #fff;
+  }
+
+  #content {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+  }
+
+  #content p {
+    color: #f0f0f0;
+  }
+  #content .desc {
+    color: #f0f0f0;
+  }
+}
+
+/* -------------- MEDIUM MOBILE WEBSITE  --------------*/
+
+@media screen and (max-width: 400px) {
+  #page {
+    width: 100vw;
+    padding: 75vw 5vw 20vw 5vw;
+    margin: 0;
+    z-index: 1;
+  }
+  form h2 {
+    white-space: nowrap;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-group button {
+    width: 100%;
+  }
+
+  #cards > div {
+    flex-direction: column;
+  }
+  #cards {
+    flex-direction: column;
+  }
+  .gcard {
+    margin-bottom: 9rem !important;
+    scale: 1.5;
+  }
+
+  .gcard p {
+    color: #fff;
+    scale: 0.7;
+    text-wrap: nowrap;
+  }
+
+  #home {
+    height: 24rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #home .home-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+  }
+}
+
+/* -------------- SMALL MOBILE WEBSITE  --------------*/
+@media screen and (max-width: 360px) {
+  form h2 {
+    white-space: wrap;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 }

@@ -5,6 +5,7 @@ import '../../index.css';
 import { Link } from 'react-router-dom';
 import Content from '../../components/Content';
 import Header from '../../components/Header';
+import Nav from '../../components/Nav';
 
 const Instagram = ({
   instagramPostLikes,
@@ -34,6 +35,7 @@ const Instagram = ({
 
   return (
     <div>
+      <Nav />
       <div id='wrapper'>
         <div id='inner'>
           <script type='text/javascript'>
@@ -227,7 +229,7 @@ const Instagram = ({
           <Header />
           <div id='page' className='space-y-14'>
             <h2>WHAT DO YOU NEED?</h2>
-            <div id='cards' className='flex justify-between'>
+            <div id='cards' className='flex'>
               {instagramData?.map((data) => (
                 <Gcard
                   data={data}

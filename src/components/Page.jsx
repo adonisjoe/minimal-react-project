@@ -13,7 +13,6 @@ const Page = ({
   data,
   Nav,
 }) => {
-  console.log(title);
   return (
     <div>
       <div id='wrapper'>
@@ -269,7 +268,7 @@ const Page = ({
               </div>
             </div>
           </div>
-          {console.log(data)}
+
           <div id='page'>
             <PageComponent
               title={title}

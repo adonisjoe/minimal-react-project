@@ -11,7 +11,6 @@ const YoutubeSubscribers = ({
   onCapitalise,
   data,
 }) => {
-  console.log(youtubeSubscribers);
   return (
     <>
       <Page

@@ -52,10 +52,10 @@ const Facebook = ({ facebookPostLikes, facebookPageLikes, onCapitalise }) => {
     <div>
       <div id='wrapper'>
         <div id='inner'>
-          <script type='text/javascript'>{`
+          {/* <script type='text/javascript'>{`
             document.getElementById('wrapper').style.opacity = '0';
             document.getElementById('menu-trigger').style.opacity = '0';
-       `}</script>
+       `}</script> */}
           <div id='sky'></div>
           <div id='background'>
             <svg
@@ -242,7 +242,7 @@ const Facebook = ({ facebookPostLikes, facebookPageLikes, onCapitalise }) => {
           <div id='page'>
             <h2>WHAT DO YOU NEED?</h2>
             <div id='cards' className=''>
-              <div className='flex justify-between'>{serviceList}</div>
+              <div className='flex gap-10'>{serviceList}</div>
             </div>
 
             <Content

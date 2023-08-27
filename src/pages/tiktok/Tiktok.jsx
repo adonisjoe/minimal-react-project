@@ -16,11 +16,7 @@ const Tiktok = ({ onCapitalise, data }) => {
   return (
     <div>
       <Nav />
-      <div id='menu-trigger'>
-        <div className='menu-trigger'></div>
-        <div className='menu-trigger'></div>
-        <div className='menu-trigger'></div>
-      </div>
+
       <div id='wrapper'>
         <div id='inner'>
           <script type='text/javascript'>
@@ -215,7 +211,7 @@ const Tiktok = ({ onCapitalise, data }) => {
             <h2>What do you need?</h2>
             <div id='cards' className=''>
               {tiktokList?.map((data) => (
-                <div className='w-72 mx-auto' key={data.serviceId}>
+                <div className=' mx-auto' key={data.serviceId}>
                   <Link
                     to={`${
                       data.type.includes('likes') ? 'video-likes' : 'followers'

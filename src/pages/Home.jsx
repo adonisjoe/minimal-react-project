@@ -1,4 +1,5 @@
 import './Home.css';
+import '../pages/facebook/facebook.css';
 import '../index.css';
 import InstagramLogo from '../components/InstagramLogo';
 import Tiktok from '../components/Tiktok.jsx';
@@ -163,7 +164,6 @@ const Home = () => {
               <Tiktok />
               <FacebookCard />
               <Youtube />
-              <div className='clear'></div>
             </div>
           </div>
         </div>
