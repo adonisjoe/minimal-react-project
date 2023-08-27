@@ -5,7 +5,6 @@ import '../../index.css';
 import { Link } from 'react-router-dom';
 import Content from '../../components/Content';
 import Header from '../../components/Header';
-import Nav from '../../components/Nav';
 
 const Instagram = ({
   instagramPostLikes,
@@ -35,13 +34,12 @@ const Instagram = ({
 
   return (
     <div>
-      <Nav />
       <div id='wrapper'>
         <div id='inner'>
-          <script type='text/javascript'>
+          {/* <script type='text/javascript'>
             document.getElementById('wrapper').style.opacity = '0';
             document.getElementById('menu-trigger').style.opacity = '0';
-          </script>
+          </script> */}
 
           <div id='sky'></div>
 

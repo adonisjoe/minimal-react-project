@@ -1,13 +1,5 @@
-// <body
-//   color="#0063d1"
-//   className="ebay"
-//   style="background-color: #0063d1"
-//   oncontextmenu="return false"
-// >
-
 import React from 'react';
 import Gcard from '../../components/Gcard';
-import Nav from '../../components/Nav';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 const Tiktok = ({ onCapitalise, data }) => {
@@ -15,8 +7,6 @@ const Tiktok = ({ onCapitalise, data }) => {
 
   return (
     <div>
-      <Nav />
-
       <div id='wrapper'>
         <div id='inner'>
           <script type='text/javascript'>

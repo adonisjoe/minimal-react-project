@@ -10,7 +10,6 @@ import Gcard from '../../components/Gcard';
 
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
-import Nav from '../../components/Nav';
 
 const Youtube = ({ onCapitalise }) => {
   const [data, setData] = useState();
@@ -33,7 +32,6 @@ const Youtube = ({ onCapitalise }) => {
 
   return (
     <div>
-      <Nav />
       <div id='wrapper'>
         <div id='inner'>
           <script type='text/javascript'>
